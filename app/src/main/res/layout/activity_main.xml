@@ -1,0 +1,71 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".MainActivity">
+
+    <!-- Total Budget Section -->
+    <TextView
+        android:id="@+id/total_budget_textview"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="20dp"
+        android:textSize="16sp"
+        android:text="Total Budget: ₹ 0.00"
+        android:textStyle="bold" />
+
+    <EditText
+        android:id="@+id/total_budget_edittext"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/total_budget_textview"
+        android:layout_marginTop="10dp"
+        android:hint="Enter Total Budget"
+        android:inputType="numberDecimal"
+        android:padding="8dp" />
+
+    <Button
+        android:id="@+id/set_budget_button"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/total_budget_edittext"
+        android:layout_marginTop="16dp"
+        android:text="Set Budget" />
+
+    <!-- Remaining Budget Section -->
+    <TextView
+        android:id="@+id/remaining_budget_textview"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/set_budget_button"
+        android:layout_marginTop="20dp"
+        android:textSize="16sp"
+        android:text="Remaining Budget: ₹ 0.00"
+        android:textStyle="bold" />
+
+    <!-- Buttons for Expense Management -->
+    <Button
+        android:id="@+id/add_expense_button"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/remaining_budget_textview"
+        android:layout_marginTop="20dp"
+        android:text="Add Expense" />
+
+    <Button
+        android:id="@+id/edit_expense_button"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/add_expense_button"
+        android:layout_marginTop="10dp"
+        android:text="Edit Expense" />
+    <ListView
+        android:id="@+id/expense_listview"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/edit_expense_button"
+        android:layout_marginTop="20dp" />
+
+
+</RelativeLayout>
